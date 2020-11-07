@@ -1,0 +1,35 @@
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/5fa5997aad23b64c84f4b706
+
+###
+DELETE http://localhost:3000/products/5fa5997aad23b64c84f4b706
+
+###
+DELETE http://localhost:3000/orders/special
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+	"name": "OnePlus Nord",
+	"price": 29000
+}
+
+###
+PATCH http://localhost:3000/products/5fa597829c44ea03b0eff67a
+Content-Type: application/json
+
+[
+	{
+		"propName": "name",
+		"value": "Playstation 5"
+	},
+	{
+		"propName": "price",
+		"value": 49000
+	}
+]
+

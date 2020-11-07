@@ -1,0 +1,32 @@
+GET http://localhost:3000/orders
+
+###
+GET http://localhost:3000/orders/5fa65d75729675050ca43967
+
+###
+DELETE http://localhost:3000/orders/5fa65aa127bd403b7886cde0
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+	"product": "5fa5a1aa1167c86484ae293e",
+	"quantity": 3
+}
+
+###
+PATCH http://localhost:3000/orders/5fa597829c44ea03b0eff67a
+Content-Type: application/json
+
+[
+	{
+		"propName": "name",
+		"value": "Playstation 5"
+	},
+	{
+		"propName": "price",
+		"value": 49000
+	}
+]
+
