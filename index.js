@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 // Routes
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/user');
 
 // DB Connection
 mongoose.connect('mongodb://127.0.0.1:27017/node-rest-api', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -32,6 +33,7 @@ app.use((req, res, next) => {
 // Forwarding requests
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 // Didn't match any route
 app.use((req, res, next) => {
